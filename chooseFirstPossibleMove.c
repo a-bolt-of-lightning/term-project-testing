@@ -72,15 +72,15 @@ int main( int argc, char * argv[] )
         }
         putchar('\n');
     }
-    printf("%d", player);
-    
+    printf("%d\n", player);
+
     return 0;
 }
 
 void possible_moves_eastward(const int opponent, const int player, int j,int i, int cell[ROW][COLUMN])
 {
     //printf("en func east %d %d %d\n", j, i, cell[i][j]);
-    while(j<ROW && i<COLUMN)
+    while(j<ROW && i<COLUMN && i>=0 && j>=0)
     {
         //printf("en while %d %d\n", j, i);
         if(cell[i][j]==player)
@@ -104,7 +104,7 @@ void possible_moves_eastward(const int opponent, const int player, int j,int i, 
 void possible_moves_westward(const int opponent, const int player, int j,int i, int cell[ROW][COLUMN])
 {
     //printf("en func east %d %d %d\n", j, i, cell[i][j]);
-    while(j<ROW && i<COLUMN)
+    while(j<ROW && i<COLUMN && i>=0 && j>=0)
     {
         //printf("en while %d %d\n", j, i);
         if(cell[i][j]==player)
@@ -129,7 +129,7 @@ void possible_moves_westward(const int opponent, const int player, int j,int i, 
 void possible_moves_northward(const int opponent, const int player, int j,int i, int cell[ROW][COLUMN])
 {
     //printf("en func east %d %d %d\n", j, i, cell[i][j]);
-    while(j<ROW && i<COLUMN)
+    while(j<ROW && i<COLUMN && i>=0 && j>=0)
     {
         //printf("en while %d %d\n", j, i);
         if(cell[i][j]==player)
@@ -153,7 +153,7 @@ void possible_moves_northward(const int opponent, const int player, int j,int i,
 void possible_moves_southward(const int opponent, const int player, int j,int i, int cell[ROW][COLUMN])
 {
     //printf("en func east %d %d %d\n", j, i, cell[i][j]);
-    while(j<ROW && i<COLUMN)
+    while(j<ROW && i<COLUMN && i>=0 && j>=0)
     {
         //printf("en while %d %d\n", j, i);
         if(cell[i][j]==player)
@@ -177,7 +177,7 @@ void possible_moves_southward(const int opponent, const int player, int j,int i,
 void possible_moves_northeastward(const int opponent, const int player, int j,int i, int cell[ROW][COLUMN])
 {
     //printf("en func east %d %d %d\n", j, i, cell[i][j]);
-    while(j<ROW && i<COLUMN)
+    while(j<ROW && i<COLUMN && i>=0 && j>=0)
     {
         //printf("en while %d %d\n", j, i);
         if(cell[i][j]==player)
@@ -203,7 +203,7 @@ void possible_moves_northeastward(const int opponent, const int player, int j,in
 void possible_moves_northwestward(const int opponent, const int player, int j,int i, int cell[ROW][COLUMN])
 {
     //printf("en func east %d %d %d\n", j, i, cell[i][j]);
-    while(j<ROW && i<COLUMN)
+    while(j<ROW && i<COLUMN && i>=0 && j>=0)
     {
         //printf("en while %d %d\n", j, i);
         if(cell[i][j]==player)
@@ -229,7 +229,7 @@ void possible_moves_northwestward(const int opponent, const int player, int j,in
 void possible_moves_southeastward(const int opponent, const int player, int j,int i, int cell[ROW][COLUMN])
 {
     //printf("en func east %d %d %d\n", j, i, cell[i][j]);
-    while(j<ROW && i<COLUMN)
+    while(j<ROW && i<COLUMN && i>=0 && j>=0)
     {
         //printf("en while %d %d\n", j, i);
         if(cell[i][j]==player)
@@ -255,7 +255,7 @@ void possible_moves_southeastward(const int opponent, const int player, int j,in
 void possible_moves_southwestward(const int opponent, const int player, int j,int i, int cell[ROW][COLUMN])
 {
     //printf("en func east %d %d %d\n", j, i, cell[i][j]);
-    while(j<ROW && i<COLUMN)
+    while(j<ROW && i<COLUMN && i>=0 && j>=0)
     {
         //printf("en while %d %d\n", j, i);
         if(cell[i][j]==player)
@@ -287,7 +287,7 @@ int randomMove(const int cell[ROW][COLUMN])
         {
             if(cell[i][j]==-1)
             {
-                printf("%d %d", j, i);
+                printf("%d %d\n", j, i);
                 return 0;
             }
         }

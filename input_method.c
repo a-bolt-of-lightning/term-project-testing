@@ -76,7 +76,7 @@ void possible_moves_eastward(const int opponent, const int player, int j,int i, 
 {
     //printf("en func east %d %d %d\n", j, i, cell[i][j]);
     int flag=0;
-    while(j<ROW && i<COLUMN)
+    while(j<ROW && i<COLUMN && i>=0 && j>=0)
     {
         //printf("en while %d %d\n", j, i);
         if(cell[i][j+1]==player)
