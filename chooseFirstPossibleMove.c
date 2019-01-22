@@ -60,10 +60,7 @@ int main( int argc, char * argv[] )
             }
         }
     }
-
-    randomMove(cell);
-    
-    
+    /*
     for(i=0; i<ROW; i++)
     {
         for(j=0; j<COLUMN; j++)
@@ -73,7 +70,8 @@ int main( int argc, char * argv[] )
         putchar('\n');
     }
     printf("%d\n", player);
-
+    */
+    randomMove(cell);
     return 0;
 }
 
@@ -287,7 +285,7 @@ int randomMove(const int cell[ROW][COLUMN])
         {
             if(cell[i][j]==-1)
             {
-                printf("%d %d\n", j, i);
+                printf("%d %d", j, i);
                 return 0;
             }
         }
