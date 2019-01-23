@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-int main( int argc, char * argv[] )
+int main( int argc, char * argv[] )   //changed
 {
     int field[8][8];
     int i,j;
