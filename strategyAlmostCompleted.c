@@ -8,7 +8,7 @@
 
 //function prototypes below:
 
-//finds and rints the best move according to the implemented strategy 
+//finds and prints the best move according to the implemented strategy 
 void find_and_print_the_best_move(int const possible_moves_arr[][4], const int possible_moves);
 
 //function to count how many disks a move can flip
@@ -69,7 +69,7 @@ int main( int argc, char * argv[] )
     }
     
     //prints the field, with -1 for possible moves, 1 for black disks, 2 for white disks and 0 for empty squares
-    /*
+    
     for(i=0; i<ROW; i++)
     {
         for(j=0; j<COLUMN; j++)
@@ -79,7 +79,7 @@ int main( int argc, char * argv[] )
         putchar('\n');
     }
     //printf("%d\n", player);
-    */
+    
     set_square_worth(square, player, opponent);
     return 0;
 }
@@ -251,12 +251,12 @@ void set_square_worth(const int square[ROW][COLUMN], int const player, int const
     //fixed worth of each square
     int const squareWorth[ROW][COLUMN]= 
     {{99, -8, 8, 6, 6, 8, -8, 99},
-    {-8 -24, -4, -3, -3, -4, -24, -8},
+    {-8, -24, -4, -3, -3, -4, -24, -8},
     {8, -4, 7, 4, 4, 7, -4, 8},
     {6, -3, 4, 0, 0, 4, -3, 6},
     {6, -3, 4, 0, 0, 4, -3, 6},
     {8, -4, 7, 4, 4, 7, -4, 8},
-    {-8 -24, -4, -3, -3, -4, -24, -8},
+    {-8, -24, -4, -3, -3, -4, -24, -8},
     {99, -8, 8, 6, 6, 8, -8, 99}};
     
     int possible_moves=0;
@@ -317,12 +317,12 @@ void set_square_worth(const int square[ROW][COLUMN], int const player, int const
 
     //calling the function to find the move with least flips
     find_and_print_the_best_move(possible_moves_arr, possible_moves);
-    /*
+
     for(i=0; i<possible_moves; i++)
     {
         printf(" %d, %d, %d, %d\n ", possible_moves_arr[i][0], possible_moves_arr[i][1], possible_moves_arr[i][2], possible_moves_arr[i][3]);
     }
-    */
+
 }
 
 int flippedDisk(int const square[ROW][COLUMN], int i, int j, int const player, int const opponent, int x, int y)
