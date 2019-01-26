@@ -1,3 +1,4 @@
 /notes_to_be_ignored_by_git
 *.exe
 *.log
+test.c
